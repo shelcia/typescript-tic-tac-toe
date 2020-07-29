@@ -45,7 +45,7 @@ var Board = /** @class */ (function () {
                 _this.gameStatus = false;
                 return;
             }
-            var roundDraw = !_this.stateInit;
+            var roundDraw = !_this.stateInit.includes("");
             if (roundDraw) {
                 statusDisplay.innerHTML = "game was drawn";
                 _this.gameStatus = false;
@@ -53,6 +53,7 @@ var Board = /** @class */ (function () {
             }
             _this.setPlayerChange();
         };
+        //UPDATING THE CELL PLAYED (ROUTE)
         this.setCellPlayed = function (e, i) {
             _this.stateInit[i] = _this.currentPlayer;
             e.innerHTML = _this.currentPlayer;

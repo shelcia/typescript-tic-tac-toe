@@ -47,7 +47,7 @@ class Board {
       this.gameStatus = false;
       return;
     }
-    let roundDraw = !this.stateInit;
+    let roundDraw = !this.stateInit.includes("");
     if (roundDraw) {
       statusDisplay.innerHTML = `game was drawn`;
       this.gameStatus = false;
@@ -55,6 +55,7 @@ class Board {
     }
     this.setPlayerChange();
   };
+  //UPDATING THE CELL PLAYED (ROUTE)
   setCellPlayed = (e: any, i: any) => {
     this.stateInit[i] = this.currentPlayer;
     e.innerHTML = this.currentPlayer;

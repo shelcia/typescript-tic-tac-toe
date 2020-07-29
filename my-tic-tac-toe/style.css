@@ -5,23 +5,30 @@
 section {
   text-align: center;
 }
+body {
+  background: linear-gradient(TO RIGHT, CORAL, YELLOW);
+}
 
 .board {
   display: grid;
   grid-template-columns: repeat(3, auto);
   width: 300px;
-  margin: 50px auto;
+  margin: 10vh auto;
+  grid-gap: 1.5px;
 }
 
 .cell {
-  font-family: "Permanent Marker", cursive;
   width: 100px;
   height: 100px;
-  box-shadow: 0 0 0 1px #00000029;
-  border: 1px solid #000000;
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   line-height: 100px;
   font-size: 60px;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in;
+}
+.cell:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .btn {
@@ -30,6 +37,7 @@ section {
   color: white;
   cursor: pointer;
   border: none;
+  border-radius: 0.25rem;
   transition: all 0.2s ease-in;
   font-size: 1.2rem;
 }
